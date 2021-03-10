@@ -168,7 +168,7 @@ function Header(props) {
                 <li className="nav-item ml-3">
                   <Link
                     className="nav-link"
-                    to="/tim-kiem"
+                    to="/all"
                   >
                     <i className="far fa-search    " />
                   </Link>

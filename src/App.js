@@ -5,6 +5,7 @@ import NavigationURL from "./router/NavigationURL";
 import ScrollToTop from "./router/ScrollToTop";
 import store from './store.js';
 import { Provider } from "react-redux";
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
   const [count, setCount] = useState(0);
   setTimeout(() => {
@@ -13,12 +14,13 @@ function App() {
   if (count === 1) {
     return (
       <Provider store={store}>
-      <div className="App">
-        <Router>
-          <ScrollToTop />
-          <NavigationURL />
-        </Router>
-      </div>
+        <div className="App">
+          <Router>
+            <ScrollToTop />
+            <NavigationURL />
+          </Router>
+
+        </div>
       </Provider>
     );
   }
