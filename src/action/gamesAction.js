@@ -1,6 +1,6 @@
 import { FECTH_GAME, FILER_GAME_BY_TYPE, ORDER_GAME, SEARCH_GAME } from "./type";
 export const  fetchGames = () => async(dispacth) => {
-    const res = await fetch("http://amadeuss.herokuapp.com/products");
+    const res = await fetch("https://amadeuss.herokuapp.com/products");
     const data = await res.json();
     dispacth({
         type: FECTH_GAME,
