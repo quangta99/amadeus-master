@@ -17,9 +17,7 @@ class SeeMore extends Component {
     this.onInputSearchChange = this.onInputSearchChange.bind(this);
   }
   componentDidMount() {
-    if (this.props.games === undefined) {
       this.props.fetchGames();
-    };
   }
   handleSort = (games, sortKey) => {
     this.props.sortGames(games, sortKey);

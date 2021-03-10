@@ -83,10 +83,14 @@ class ChiTietSP extends React.Component {
   handleClickAddToCart = (game) => {
     this.props.addToCart(game);
     this.props.countItemInCart();
+    alert("Thêm vào giỏ hàng thàng công");
   }
   handleBuyNow = (game) =>{
     this.props.addToCart(game);
     this.props.countItemInCart();
+    this.setState({
+      ChuyenHuong: true
+    })
   }
   render() {
     const formatter = new Intl.NumberFormat("vi-VI", {

@@ -18,13 +18,10 @@ export const filterGamesByType = (games, type) => (dispacth) =>{
 }
 export const sortGames =(filteredGame, sort) => (dispacth) => {
     const sortedGames = filteredGame;
-    if(sort === "") {
-        sortedGames.sort((a,b) => (a.id > b.id ? 1 : -1));
-    }
-    else if(sort === "highest") {
+    if(sort === "highest") {
         sortedGames.sort((a,b) => (a.price < b.price ? 1 : -1 ));
     }
-    else {
+    else if(sort === "lowest") {
         sortedGames.sort((a,b) => (a.price > b.price ? 1 : -1));
     }
     dispacth({
