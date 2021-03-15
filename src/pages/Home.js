@@ -7,11 +7,10 @@ import Carousel from "../components/Carousel";
 import { connect } from "react-redux";
 import {fetchGames} from '../action/gamesAction';
 class Home extends React.Component {
-  
+  componentDidMount(){
+    this.props.fetchGames();
+  }
   render() {
-    if(this.props.games === undefined) {
-      this.props.fetchGames();
-    }
     let promotionCount = 0;
     const ListData = this.props.games;
     return (
